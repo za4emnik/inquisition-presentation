@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_21_150125) do
+ActiveRecord::Schema.define(version: 2019_03_21_150642) do
 
   create_table "authors", force: :cascade do |t|
     t.string "name"
@@ -19,6 +19,10 @@ ActiveRecord::Schema.define(version: 2019_03_21_150125) do
     t.integer "posts_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["email", "login"], name: "index_email_login"
+    t.index ["email"], name: "index_authors_on_email"
+    t.index ["login", "email"], name: "index_login_email"
+    t.index ["login"], name: "index_authors_on_login"
     t.index ["posts_id"], name: "index_authors_on_posts_id"
   end
 
