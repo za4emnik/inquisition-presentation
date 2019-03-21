@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_21_150642) do
+ActiveRecord::Schema.define(version: 2019_03_21_151645) do
 
   create_table "authors", force: :cascade do |t|
     t.string "name"
@@ -23,7 +23,6 @@ ActiveRecord::Schema.define(version: 2019_03_21_150642) do
     t.index ["email"], name: "index_authors_on_email"
     t.index ["login", "email"], name: "index_login_email"
     t.index ["login"], name: "index_authors_on_login"
-    t.index ["posts_id"], name: "index_authors_on_posts_id"
   end
 
   create_table "comments", force: :cascade do |t|
@@ -32,8 +31,6 @@ ActiveRecord::Schema.define(version: 2019_03_21_150642) do
     t.integer "author_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["author_id"], name: "index_comments_on_author_id"
-    t.index ["post_id"], name: "index_comments_on_post_id"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -43,8 +40,6 @@ ActiveRecord::Schema.define(version: 2019_03_21_150642) do
     t.integer "comments_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["author_id"], name: "index_posts_on_author_id"
-    t.index ["comments_id"], name: "index_posts_on_comments_id"
   end
 
 end
