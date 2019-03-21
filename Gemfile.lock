@@ -1,5 +1,7 @@
-PATH
-  remote: /home/dell/projects/inquisition
+GIT
+  remote: git://github.com/rubygarage/inquisition.git
+  revision: 2da3a8e9f88172ff978bc894fa61a7698e12c6f7
+  branch: feature/77-prepare-to-release
   specs:
     inquisition (0.2.0)
       active_record_doctor

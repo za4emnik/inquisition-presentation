@@ -7,7 +7,7 @@ ruby '2.5.1'
 gem 'rails', '~> 5.2.2', '>= 5.2.2.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.3.6'
-gem "inquisition", :path => "/home/dell/projects/inquisition", group: %w(development test)
+gem 'inquisition', :git => "git://github.com/rubygarage/inquisition.git", :branch => "feature/77-prepare-to-release"
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
