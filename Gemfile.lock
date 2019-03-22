@@ -1,7 +1,5 @@
-GIT
-  remote: git://github.com/rubygarage/inquisition.git
-  revision: 2da3a8e9f88172ff978bc894fa61a7698e12c6f7
-  branch: feature/77-prepare-to-release
+PATH
+  remote: /home/dell/projects/inquisition
   specs:
     inquisition (0.2.0)
       active_record_doctor
@@ -328,7 +326,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
-    reek (5.3.1)
+    reek (5.3.2)
       codeclimate-engine-rb (~> 0.4.0)
       kwalify (~> 0.7.0)
       parser (>= 2.5.0.0, < 2.7, != 2.5.1.1)
