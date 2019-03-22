@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_21_151645) do
+ActiveRecord::Schema.define(version: 2019_03_22_072052) do
 
   create_table "authors", force: :cascade do |t|
     t.string "name"
     t.string "login"
     t.string "email"
-    t.integer "posts_id"
+    t.string "posts_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email", "login"], name: "index_email_login"
